@@ -54,6 +54,9 @@
             const response = await fetch('http://localhost:8080/api/compliment');
             const text = await response.text();
 
+            messageDiv.style.color = "";
+            messageDiv.innerText = text;
+
             messageDiv.innerText = text;
         } catch (error) {
             messageDiv.innerText = "The royal messenger hath failed (Is Java running?)";
