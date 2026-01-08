@@ -16,26 +16,23 @@ public class DatabaseSeeder implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         if (repository.count() == 0) {
-            System.out.println("The archives are empty! Seeding ancient wisdom...");
+            System.out.println("Archives empty. Inscribing wisdom of the ages...");
 
-            List<Compliment> initialCompliments = List.of(
-                new Compliment("Verily, thou art more pleasant than a warm hearth in winter."),
-                new Compliment("Thy wit is sharper than a fresh-forged sword!"),
-                new Compliment("I would gladly share my last wheel of cheese with thee."),
-                new Compliment("Thou lookest dashing enough to marry into royalty immediately."),
-                new Compliment("Hark! Thy presence is more welcome than ale after the harvest."),
-                new Compliment("Thy charm could convince a dragon to give up its hoard."),
-                new Compliment("Thou hast a spirit wilder than a boar in the forest."),
-                new Compliment("Even the court jesters take notes when thou speakest."),
-                new Compliment("Thou art the finest creature to ever walk upon cobblestone."),
-                new Compliment("Forsooth, thou shinest brighter than a polished shield.")
+            List<Compliment> quotes = List.of(
+                new Compliment("The die is cast.", "Julius Caesar"),
+                new Compliment("I am the state.", "Louis XIV"),
+                new Compliment("To defeat the enemy, you must become the enemy.", "Sun Tzu"),
+                new Compliment("God is not on the side of the big battalions, but on the side of the best shots.", "Voltaire"),
+                new Compliment("A prince must be a fox to know the traps and a lion to frighten the wolves.", "Niccolò Machiavelli"),
+                new Compliment("Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.", "Sun Tzu"),
+                new Compliment("It is better to be feared than loved, if you cannot be both.", "Niccolò Machiavelli"),
+                new Compliment("History is a set of lies agreed upon.", "Napoleon Bonaparte"),
+                new Compliment("An army marches on its stomach.", "Napoleon Bonaparte"),
+                new Compliment("There is no place for the weak in this world.", "Otto von Bismarck")
             );
 
-            repository.saveAll(initialCompliments);
-
-            System.out.println("Seeding complete! 10 Scrolls added.");
-        } else {
-            System.out.println("Royal library already contains " + repository.count() + " scrolls.");
+            repository.saveAll(quotes);
+            System.out.println("Seeding complete! 10 Historical Quotes added.");
         }
     }
 }
