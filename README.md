@@ -4,6 +4,8 @@
 
 A full-stack Spring Boot application that curates, displays, and archives historical quotes. This project serves as a digital library for wisdom from history's greatest minds.
 
+![App Preview](backend/assets/preview.png)
+
 ## Features
 
 * **Consult the Archives:** Instantly summon random quotes from a persistent database.
